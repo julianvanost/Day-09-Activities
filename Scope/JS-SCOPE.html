@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 id="add">0</h1>
+  <h1 id="display">0</h1>
+  <button class="numBtn" value="1">1</button>
+  <button class="numBtn" value="2">2</button>
+  <button class="numBtn" value="3">3</button>
+  <button class="numBtn" value="4">4</button>
+  <button class="numBtn" value="5">5</button>
+
+
+  <script>
+    // let add = 0
+    // document.addEventListener('click', function (event) {
+    //   if (event.target.className === "numBtn") {
+    //     add += parseInt(event.target.value)
+    //     document.getElementById('add').textContent = add
+    //   }
+    // })
+    // let display = 0
+    // document.addEventListener('click', function (event) {
+    //   if (event.target.className === "numBtn") {
+    //     display = parseInt(event.target.value)
+    //     document.getElementById('display').textContent = display
+    //   }
+    // })
+
+    // document.onkeyup = function (event) {
+    //   console.log(event)
+    // }
+
+    let letter = 'x' //out of scope for below function:
+
+    const myFunction = function () {
+      let letter = 'a'
+      console.log(letter)
+    }
+
+    const otherFuction = function () {
+      let letter = 'b' // output is > 'b'
+      console.log(letter)
+    }
+
+    for (let i = 0; i < 10; i++) {
+      console.log(i)
+    }
+    console.log(i) //outside scope of loop declaration of 'let i' 
+    //^^ Uncaught ReferenceError: i is not defined ^^
+
+    //RULE OF THUMB
+//!!!!! Any place that {curly braces} are used, scope is in effect!!!!!!!! 
+//!!!!! Any place that {curly braces} are used, scope is in effect!!!!!!!! 
+//!!!!! Any place that {curly braces} are used, scope is in effect!!!!!!!! 
+//!!!!! Any place that {curly braces} are used, scope is in effect!!!!!!!! 
+
+  </script>
+</body>
+
+</html>

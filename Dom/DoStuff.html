@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <form>
+    <p>
+      <label for="email">Email:</label>
+      <input type="text" name="email" id="email" placeholder="johndoe@gmail.com">
+    </p>
+    <p>
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password">
+    </p>
+    <p>
+      <button id="submit">Submit</button>
+    </p>
+  </form>
+
+  <script>
+
+    let users = []
+    
+    document.getElementById('submit').addEventListener('click', function (event) {
+      event.preventDefault()
+
+      let user = {
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value
+      }
+
+      users.push(user)
+
+      console.log(users)
+
+      document.getElementById('email').value = ''
+      document.getElementById('password').value = ''
+    })
+
+  </script>
+</body>
+</html>

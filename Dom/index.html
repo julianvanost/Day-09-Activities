@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Password Generator</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="./styles.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <form>
+      <table>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="text" name="email" id="email" placeholder="johndoe@gmail.com"></input></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password:</label></td>
+          <td><input type="password" name="password" id="password"></td>
+        </tr>
+        <tr>
+          <td><button id="submit">Submit</button></td>
+        </tr>
+      </table>
+    </form>
+    <div id="output"></div>
+    <div id="clickCounter">0</div>
+  </div>
+</body>
+<script>
+
+setTimeout(function( ){
+  console.log("hi")
+},2000) 
+
+setInterval(function() {
+  document.getElementById('clickCounter').textContent++
+  console.log(document.getElementById('clickCounter').textContent)
+}, 1000);
+
+const renderUser = function (user) {
+  let userElem = document.createElement('div')
+  userElem.innerHTML = `
+  <p>Email: ${user.email}</p> 
+  <p>Password: ${user.password}</p>`
+  // console.log(users)
+  document.getElementById('output').append(userElem)
+}
+  document.getElementById('submit').addEventListener
+  ('click', function (event) {
+      event.preventDefault()
+      
+      setTimeout(function() {
+        renderUser({
+          email: document.getElementById('email').value,
+          password: document.getElementById('password').value
+        })
+      
+      document.getElementById('email').value = ''
+      document.getElementById('password').value = ''
+      // document.getElementById('clickCounter').textContent = counter
+      },2000)
+      
+      // users.push(user)
+      // for (let i = 0; i< users.length; i ++) {
+      })
+        
+
+  
+    </script>
+
+</html>
